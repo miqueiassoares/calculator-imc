@@ -1,0 +1,140 @@
+@charset "UTF-8";
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+html, body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #111;
+    color: aliceblue;
+}
+
+body {
+    position: relative;
+}
+
+.container {
+    width: 400px;
+    margin: 12vw auto;
+    padding: 10px;
+    background: #444;
+    border-radius: 20px;
+    display: none;
+}
+
+button, input, label, input::placeholder {
+    display: block;
+    border: 1px solid black;
+    width: 100%;
+    margin-top: 10px;
+    padding: 10px;
+    background: transparent;
+    color: white;
+    border-radius: 10px;
+}
+
+#title-form {
+    font-size: 1.5rem;
+    text-align: center;
+    text-transform: capitalize;
+    color: aliceblue;
+    font-weight: bold;
+}
+
+label {
+    border: 0;
+    margin-bottom: -10px;
+
+}
+
+input {
+    background-color: #111;
+}
+
+input:focus {
+    outline: 2px solid aliceblue;
+}
+
+input::placeholder {
+    background-color: aliceblue;
+    color: #111;
+}
+
+button {
+    margin-top: 20px;
+    background-color: #111;
+    cursor: pointer;
+    transition: .2s;
+}
+
+button:hover {
+    opacity: .5;
+}
+
+.area-click {
+    position: absolute;
+    z-index: 1;
+    background-color: rgba(17, 17, 17, 0.568);
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal {
+    z-index: 1;
+     background-color: rgb(11, 11, 11);
+    max-width: 700px;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+table {
+    border: 3px solid blue;
+    padding: 5px;
+    font-size: .89rem;
+}
+
+th {
+    background: rgb(0, 0, 168);
+    padding: 5px;
+}
+
+tr>td:first-child {
+    background-color: rgba(105, 105, 236, 0.601);
+    border: 1px solid transparent;
+}
+
+#abaixo {
+    
+}
+
+td {
+    border: 1px solid white;
+    padding: 5px;
+}
+
+#div-result {
+    border: 3px solid green;
+    padding: 10px;
+}
+
+#title-result {
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+#p-result {
+    color: aliceblue;
+}
+
+#result {
+    color: greenyellow;
+}
