@@ -12,17 +12,13 @@ html, body {
     color: aliceblue;
 }
 
-body {
-    position: relative;
-}
-
 .container {
     width: 400px;
     margin: 12vw auto;
     padding: 10px;
     background: #444;
     border-radius: 20px;
-    display: none;
+    display: block;
 }
 
 button, input, label, input::placeholder {
@@ -76,6 +72,7 @@ button:hover {
 
 .area-click {
     position: absolute;
+    top: 0;
     z-index: 1;
     background-color: rgba(17, 17, 17, 0.568);
     height: 100vh;
@@ -87,7 +84,7 @@ button:hover {
 
 .modal {
     z-index: 1;
-     background-color: rgb(11, 11, 11);
+    background-color: rgb(11, 11, 11);
     max-width: 700px;
     padding: 20px;
     display: flex;
@@ -112,18 +109,36 @@ tr>td:first-child {
     border: 1px solid transparent;
 }
 
-#abaixo {
+#abaixo>td:last-child{
+    color: rgb(197, 232, 145);
     
+}
+#ideal>td:last-child {
+    color: greenyellow;
+}
+#levemente-acima>td:last-child {
+    color: rgb(87, 128, 0);
+}
+#grauI>td:last-child {
+    color: rgb(128, 117, 0);
+}
+#grauII>td:last-child {
+    color: rgb(128, 34, 0);
+}
+#grauIII>td:last-child {
+    color: rgb(128, 0, 0);
 }
 
 td {
     border: 1px solid white;
     padding: 5px;
+    font-weight: bold;
 }
 
 #div-result {
     border: 3px solid green;
     padding: 10px;
+    text-align: center;
 }
 
 #title-result {
@@ -136,5 +151,25 @@ td {
 }
 
 #result {
-    color: greenyellow;
+    color: rgb(144, 144, 255);
+}
+
+.hide {
+    display: none;
+}
+
+.aviso {
+    text-transform: uppercase;
+}
+
+.click {
+    position: absolute;
+    top: 10px;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: .2s;
+}
+
+.click:hover {
+    border: 2px solid white;
 }
