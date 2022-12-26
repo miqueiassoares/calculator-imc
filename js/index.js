@@ -1,14 +1,4 @@
-// formula pra calcular imc:
-
-/* 
-imc = peso
-    --------
-    altura**2
-
-peso em kg
-altura em metros
-
-*/
+"use strict";
 
 const button = document.querySelector("#submit");
 const modalX = document.querySelector(".click");
@@ -46,7 +36,7 @@ function gerarTexto(imc) {
 function abrirModal(imc) {
     const aviso = document.querySelector(".aviso");
     const modal = document.querySelector(".area-click");
-    modal.classList.remove("hide");
+    modal.style.display = "flex";
     const resultado = document.querySelector("#result");
     resultado.textContent = imc;
     const texto = gerarTexto(imc);
@@ -74,7 +64,5 @@ button.addEventListener("click", (event) => {
 
 modalX.addEventListener("click", () => {
     const modal = document.querySelector(".area-click");
-    const aviso = document.querySelector(".aviso");
-    modal.classList.add("hide");
-    aviso.textContent = "";
+    modal.style.display = 'none';
 });
