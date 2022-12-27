@@ -5,26 +5,26 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Imc Calculate</title>
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="css/style.css">
     <script src="js/index.js" defer></script>
 </head>
 <body>
     <div class="container">
-        <form action="">
-            <legend id="title-form">Calculate for Imc</legend>
-
-            <label for="weight">Enter your weight here:</label>
-            <input type="text" placeholder="Example: 48.4" id="weight" name="weight" maxlength="10" autocomplete="off">
-
-            <label for="height">Enter your height here:</label>
-            <input type="text" placeholder="Example: 1.69 or 1.90" id="height" name="height" maxlength="4" autocomplete="off">
-
-            <button type="submit" id="submit">Calculate</button>
-        </form>
+        <div>
+            <form action="">
+                <legend id="title-form">Calculate for Imc</legend>
+                <label for="weight">Enter your weight here:</label>
+                <input type="text" placeholder="Example: 48.4" id="weight" name="weight" maxlength="10" autocomplete="off" tabindex="1">
+                <label for="height">Enter your height here:</label>
+                <input type="text" placeholder="Example: 1.69 or 1.90" id="height" name="height" maxlength="4" autocomplete="off" tabindex="2">
+                <button type="submit" id="submit">Calculate</button>
+            </form>
+        </div>
     </div>
     <div class="area-click"> 
-        <img src="img/close_FILL0_wght400_GRAD0_opsz48.svg" alt="Fechar" class="click">
         <div class="modal">
+            <img src="img/close_FILL0_wght400_GRAD0_opsz48.svg" alt="Fechar" class="click">
             <table>
                 <thead>
                     <tr>

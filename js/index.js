@@ -2,6 +2,15 @@
 
 const button = document.querySelector("#submit");
 const modalX = document.querySelector(".click");
+const areaClick = document.querySelector(".area-click");
+
+areaClick.addEventListener("click", (event) => {
+    console.log(event.target);
+    if(event.target === areaClick) {
+        areaClick.style.display = "none";
+    }
+});
+
 
 function gerarCorDeTexto(texto, aviso) {
     switch (texto) {
