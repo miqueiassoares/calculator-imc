@@ -26,6 +26,10 @@ html, body {
     transition: background 1s;
 }
 
+.mode {
+    cursor: pointer;
+}
+
 .ligado {
     background-color: #111;
     border-radius: 15px;
