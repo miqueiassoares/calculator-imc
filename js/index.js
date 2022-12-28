@@ -5,7 +5,6 @@ const modalX = document.querySelector(".click");
 const areaClick = document.querySelector(".area-click");
 
 areaClick.addEventListener("click", (event) => {
-    console.log(event.target);
     if(event.target === areaClick) {
         areaClick.style.display = "none";
     }
@@ -74,4 +73,33 @@ button.addEventListener("click", (event) => {
 modalX.addEventListener("click", () => {
     const modal = document.querySelector(".area-click");
     modal.style.display = 'none';
+});
+
+// DARK MODE - LIGHT MODE:
+
+function ativarModo(element) {
+    const lightMode = document.querySelector(".light-mode");
+    const darkMode = document.querySelector(".dark-mode");
+    const body = document.querySelector("body");
+    if (element === darkMode && darkMode.classList.contains("desligado")){
+        element.classList.toggle("desligado");
+        element.classList.toggle("ligado");
+        lightMode.classList.toggle("desligado");
+        lightMode.classList.toggle("ligado");
+        body.classList.toggle("light-mode-body")
+    } else if (element === lightMode && lightMode.classList.contains("desligado")) {
+        element.classList.toggle("desligado");
+        element.classList.toggle("ligado");
+        darkMode.classList.toggle("desligado");
+        darkMode.classList.toggle("ligado");
+        body.classList.toggle("light-mode-body")
+    }
+    mudarCores();
+}
+
+const mode = document.querySelectorAll(".mode");
+mode.forEach((element) => {
+    element.addEventListener("click", () => {
+        ativarModo(element);
+    });
 });

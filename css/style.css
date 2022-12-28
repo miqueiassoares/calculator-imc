@@ -8,8 +8,43 @@
 
 html, body {
     font-family: Arial, Helvetica, sans-serif;
+    transition: background .5s;
     background: #111;
     color: aliceblue;
+}
+
+#mode {
+    transform: scale(.8);
+    display: flex;
+    flex-direction: column-reverse;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    border-radius: 20px;
+    background-color: #fff;
+    padding: 3px;
+    transition: background 1s;
+}
+
+.ligado {
+    background-color: #111;
+    border-radius: 15px;
+}
+
+.ligado>svg>path {
+    fill: #fff;
+}
+
+.desligado>svg {
+    transform: scale(.7);
+}
+
+#mode>hr {
+    margin: 5px auto;
+    border: 0;
+    width: 70%;
+    height: 2px;
+    background-color: #111;
 }
 
 .container {
@@ -26,6 +61,8 @@ html, body {
     background: #444;
     border-radius: 20px;
     display: block;
+    box-shadow: 0px 0px 5px white;
+    transition: background 1s;
 }
 
 button, input, label, input {
@@ -112,8 +149,7 @@ button:hover {
 }
 
 .click:hover {
-    border: 2px solid red;
-    fill: red;
+    border: 2px solid white;
 }
 
 table {
@@ -124,8 +160,9 @@ table {
 }
 
 th {
-    background: rgb(0, 0, 168);
+    background: rgb(44, 44, 163);
     padding: 5px;
+    color: #fff;
 }
 
 tr>td:first-child {
@@ -174,10 +211,60 @@ td {
     color: aliceblue;
 }
 
-#result {
-    color: rgb(144, 144, 255);
+span#result {
+    color: rgb(224, 232, 75);
 }
 
 .aviso {
     text-transform: uppercase;
+}
+
+/* DARK MODE */
+
+.light-mode-body {
+    background-color: #fff;
+    color: #111;
+}
+.light-mode-body>#mode {
+    background-color: #111;
+}
+.light-mode-body>#mode>.light-mode {
+    background-color: #fff;
+}
+
+.light-mode-body>#mode>.light-mode>svg>path {
+    fill: #111;
+}
+.light-mode-body>#mode>.dark-mode>svg>path {
+    fill: #fff;
+}
+.light-mode-body>#mode>hr {
+    background-color: white;
+}
+
+.light-mode-body>.container>div:first-child {
+    background-color: rgb(152, 187, 187);
+    box-shadow: 0px 0px 5px #444;
+}
+
+.light-mode-body>.container>div:first-child>form> label, #title-form {
+    color: #111;
+}
+.light-mode-body>.container>div:first-child>form>button {
+    background-color: #fff;
+    color: #111;
+    font-weight: bold;
+}
+
+.light-mode-body .modal {
+    background-color: #fff;
+}
+.light-mode-body .modal table {
+    background-color: rgb(6, 6, 6);
+}
+.light-mode-body #p-result, #result {
+    color: #111;
+}
+.light-mode-body .aviso {
+    background-color: #111;
 }
