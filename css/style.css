@@ -80,7 +80,7 @@ button, input, label, input {
     border-radius: 10px;
 }
 
-#title-form {
+form>legend {
     font-size: 1.5rem;
     text-align: center;
     text-transform: capitalize;
@@ -251,7 +251,7 @@ span#result {
     box-shadow: 0px 0px 5px #444;
 }
 
-.light-mode-body>.container>div:first-child>form> label, #title-form {
+.light-mode-body> .container>div:first-child>form> label, legend{
     color: #111;
 }
 .light-mode-body>.container>div:first-child>form>button {
