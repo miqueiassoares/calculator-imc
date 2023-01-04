@@ -81,18 +81,21 @@ function ativarModo(element) {
     const lightMode = document.querySelector(".light-mode");
     const darkMode = document.querySelector(".dark-mode");
     const body = document.querySelector("body");
+    const legend = document.querySelector("#title-form");
     if (element === darkMode && darkMode.classList.contains("desligado")){
         element.classList.toggle("desligado");
         element.classList.toggle("ligado");
         lightMode.classList.toggle("desligado");
         lightMode.classList.toggle("ligado");
         body.classList.toggle("light-mode-body")
+        legend.classList.remove("legend");
     } else if (element === lightMode && lightMode.classList.contains("desligado")) {
         element.classList.toggle("desligado");
         element.classList.toggle("ligado");
         darkMode.classList.toggle("desligado");
         darkMode.classList.toggle("ligado");
         body.classList.toggle("light-mode-body")
+        legend.classList.add("legend");
     }
 }
 

@@ -9,7 +9,7 @@
 html, body {
     font-family: Arial, Helvetica, sans-serif;
     transition: background .5s;
-    background: #111;
+    background: #000;
     color: aliceblue;
 }
 
@@ -62,10 +62,11 @@ html, body {
 .container>div:first-child {
     transform: scale(1.3);
     padding: 20px;
-    background: #444;
+    background: #000;
     border-radius: 20px;
     display: block;
-    box-shadow: 0px 0px 5px white;
+    border: 2px solid aqua;
+    box-shadow: 0px 0px 5px aqua;
     transition: background 1s;
 }
 
@@ -84,41 +85,50 @@ form>legend {
     font-size: 1.5rem;
     text-align: center;
     text-transform: capitalize;
-    color: aliceblue;
+    color: aqua;
     font-weight: bold;
 }
 
 label {
     border: 0;
     margin-bottom: -10px;
+    color: aqua;
 
 }
 
 input {
-    background-color:aliceblue;
-    color: #111;
+    background-color: #444;
+    color: white;
 }
 
 input:focus {
-    outline: 2px solid aliceblue;
-    background-color: #111;
-    color: aliceblue;
+    padding: 9px;
+    outline: 0;
+    border: 2px solid aqua;
+    box-shadow: 0px 0px 5px aqua;
+    background-color: #000;
+    color: aqua;
 }
 
 
 input::placeholder {
-    color: rgb(147, 147, 147);
+    color: #999;
 }
 
 button {
     margin-top: 20px;
-    background-color: #111;
+    color: aqua;
+    background-color: #000;
+    border: 2px solid aqua;
+    box-shadow: 0px 0px 5px aqua;
     cursor: pointer;
     transition: .2s;
 }
 
 button:hover {
-    opacity: .5;
+    color: chartreuse;
+    border-color: chartreuse;
+    box-shadow: 0px 0px 5px chartreuse;
 }
 
 .area-click {
@@ -140,6 +150,7 @@ button:hover {
     padding: 30px;
     position: relative;
     transform: scale(.9);
+    border: 1px solid white;
 }
 
 .click {
@@ -225,39 +236,60 @@ span#result {
 
 /* DARK MODE */
 
+.legend {
+    color: orangered;
+}
+
 .light-mode-body {
-    background-color: #fff;
-    color: #111;
+    background-color: rgb(121, 160, 160);
 }
 .light-mode-body>#mode {
-    background-color: #111;
+    background-color: rgb(7, 51, 51);
 }
 .light-mode-body>#mode>.light-mode {
-    background-color: #fff;
+    background-color: orangered;
 }
 
 .light-mode-body>#mode>.light-mode>svg>path {
-    fill: #111;
+    fill: rgb(7, 51, 51);
 }
 .light-mode-body>#mode>.dark-mode>svg>path {
-    fill: #fff;
+    fill: orangered;
 }
 .light-mode-body>#mode>hr {
     background-color: white;
 }
 
 .light-mode-body>.container>div:first-child {
-    background-color: rgb(152, 187, 187);
-    box-shadow: 0px 0px 5px #444;
+    background-color: rgb(7, 51, 51);
+    box-shadow: 0px 0px 5px orangered;
+    border: 2px solid orangered;
 }
 
-.light-mode-body> .container>div:first-child>form> label, legend{
-    color: #111;
+.light-mode-body form> label{
+    color: orangered;
+    font-weight: bold;
 }
+
+.light-mode-body form> input {
+    border-color: orangered;
+    background-color: #000;
+}
+.light-mode-body form> input:focus {
+    box-shadow: 0px 0px 5px orangered;
+    color: orangered;
+}
+
 .light-mode-body>.container>div:first-child>form>button {
-    background-color: #fff;
+    background-color: orangered;
+    border: none;
+    box-shadow: none;
     color: #111;
     font-weight: bold;
+}
+
+.light-mode-body>.container>div:first-child>form>button:hover {
+    box-shadow: 0px 0px 5px orangered;
 }
 
 .light-mode-body .modal {
