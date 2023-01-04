@@ -94,7 +94,6 @@ function ativarModo(element) {
         darkMode.classList.toggle("ligado");
         body.classList.toggle("light-mode-body")
     }
-    mudarCores();
 }
 
 const mode = document.querySelectorAll(".mode");
